@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url(backPat.png);
+}
+
+main {
+  border: solid 3px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div {
+  border: dashed 1px black;
+  background-color: lightyellow;
+}
+
+.one, .two, .three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+  margin: 15px;
+}
+
+div a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
+
+h2, p, a {
+  flex: 1 100%;
+}
+
+h2 {
+  color: green;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#github {
+  width: 150px;
+}
+
+#github:active {
+  animation: rotate 1s;
+  animation-fill-mode: backwards;
+  width: 150px;
+}
+
+@keyframes rotate {
+  0% {transform: translateX(0px)}
+  50% {transform: rotate(90deg)}
+  100% {transform: translateX(1000px)}
+}
+
+@media all and (max-width: 600px) {
+  .one, .two, .three {flex-direction: column;}
+}
+
+.yelp {
+  width: 10%;
+  animation: spin 2s;
+  border-radius: 50px;
+}
+
+@keyframes spin {
+  100% {transform: rotate(360deg)}
+}
